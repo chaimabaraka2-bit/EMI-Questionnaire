@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI in Algerian Medical Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .header {
+            background: #1e3c72;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        h1 { margin: 0; font-size: 24px; }
+        .intro { background: #f0f0f0; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .question { background: #fafafa; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ddd; }
+        .question label { font-weight: bold; color: #1e3c72; display: block; margin-bottom: 10px; }
+        select, input[type="text"] { width: 100%; padding: 10px; border-radius: 5px; border: 2px solid #ddd; }
+        .likert { display: flex; gap: 5px; flex-wrap: wrap; }
+        .likert label { font-weight: normal; padding: 10px; background: white; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; flex: 1; text-align: center; min-width: 80px; }
+        .likert input:checked + label { background: #1e3c72; color: white; border-color: #1e3c72; }
+        .likert input { display: none; }
+        .consent { background: #fff3cd; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        button { background: #1e3c72; color: white; padding: 15px 30px; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; width: 100%; }
+        button:hover { background: #2a5298; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>EMI in Algerian Medical Education</h1>
+            <p>Research Questionnaire for Bachelor's Degree Students</p>
+        </div>
+        
+        <div class="intro">
+            <p><strong>Dear Student,</strong></p>
+            <p>You are invited to participate in this research about English-Medium Instruction in Algerian medical education. Your responses are anonymous and will be used for academic research.</p>
+        </div>
+        
+        <div class="consent">
+            <p><strong>Informed Consent:</strong> Your participation is voluntary. Click to confirm you agree to participate.</p>
+            <input type="checkbox" id="consent" required>
+            <label for="consent">I agree to participate in this study</label>
+        </div>
+        
+        <form id="survey">
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">1</span>Have you previously studied any subjects in English before university?</label>
+                <select name="q1" required>
+                    <option value="">Select...</option>
+                    <option value="primary">Yes, in primary school</option>
+                    <option value="secondary">Yes, in secondary school</option>
+                    <option value="both">Yes, in both</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">2</span>Do you believe that EMI is important in higher education?</label>
+                <div class="likert">
+                    <input type="radio" id="q2a" name="q2" value="1"><label for="q2a">Strongly Disagree</label>
+                    <input type="radio" id="q2b" name="q2" value="2"><label for="q2b">Disagree</label>
+                    <input type="radio" id="q2c" name="q2" value="3"><label for="q2c">Neutral</label>
+                    <input type="radio" id="q2d" name="q2" value="4"><label for="q2d">Agree</label>
+                    <input type="radio" id="q2e" name="q2" value="5"><label for="q2e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">3</span>English helps me access international scientific and medical knowledge.</label>
+                <div class="likert">
+                    <input type="radio" id="q3a" name="q3" value="1" required><label for="q3a">Strongly Disagree</label>
+                    <input type="radio" id="q3b" name="q3" value="2"><label for="q3b">Disagree</label>
+                    <input type="radio" id="q3c" name="q3" value="3"><label for="q3c">Neutral</label>
+                    <input type="radio" id="q3d" name="q3" value="4"><label for="q3d">Agree</label>
+                    <input type="radio" id="q3e" name="q3" value="5"><label for="q3e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">4</span>Studying medicine in English increases my academic opportunities.</label>
+                <div class="likert">
+                    <input type="radio" id="q4a" name="q4" value="1" required><label for="q4a">Strongly Disagree</label>
+                    <input type="radio" id="q4b" name="q4" value="2"><label for="q4b">Disagree</label>
+                    <input type="radio" id="q4c" name="q4" value="3"><label for="q4c">Neutral</label>
+                    <input type="radio" id="q4d" name="q4" value="4"><label for="q4d">Agree</label>
+                    <input type="radio" id="q4e" name="q4" value="5"><label for="q4e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">5</span>I find it difficult to understand medical lectures delivered in English.</label>
+                <div class="likert">
+                    <input type="radio" id="q5a" name="q5" value="1" required><label for="q5a">Strongly Disagree</label>
+                    <input type="radio" id="q5b" name="q5" value="2"><label for="q5b">Disagree</label>
+                    <input type="radio" id="q5c" name="q5" value="3"><label for="q5c">Neutral</label>
+                    <input type="radio" id="q5d" name="q5" value="4"><label for="q5d">Agree</label>
+                    <input type="radio" id="q5e" name="q5" value="5"><label for="q5e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">6</span>I struggle to participate in classroom discussions conducted in English.</label>
+                <div class="likert">
+                    <input type="radio" id="q6a" name="q6" value="1" required><label for="q6a">Strongly Disagree</label>
+                    <input type="radio" id="q6b" name="q6" value="2"><label for="q6b">Disagree</label>
+                    <input type="radio" id="q6c" name="q6" value="3"><label for="q6c">Neutral</label>
+                    <input type="radio" id="q6d" name="q6" value="4"><label for="q6d">Agree</label>
+                    <input type="radio" id="q6e" name="q6" value="5"><label for="q6e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">7</span>Limited English proficiency affects my academic performance.</label>
+                <div class="likert">
+                    <input type="radio" id="q7a" name="q7" value="1" required><label for="q7a">Strongly Disagree</label>
+                    <input type="radio" id="q7b" name="q7" value="2"><label for="q7b">Disagree</label>
+                    <input type="radio" id="q7c" name="q7" value="3"><label for="q7c">Neutral</label>
+                    <input type="radio" id="q7d" name="q7" value="4"><label for="q7d">Agree</label>
+                    <input type="radio" id="q7e" name="q7" value="5"><label for="q7e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">8</span>Medical terminology in English is difficult to understand.</label>
+                <div class="likert">
+                    <input type="radio" id="q8a" name="q8" value="1" required><label for="q8a">Strongly Disagree</label>
+                    <input type="radio" id="q8b" name="q8" value="2"><label for="q8b">Disagree</label>
+                    <input type="radio" id="q8c" name="q8" value="3"><label for="q8c">Neutral</label>
+                    <input type="radio" id="q8d" name="q8" value="4"><label for="q8d">Agree</label>
+                    <input type="radio" id="q8e" name="q8" value="5"><label for="q8e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">9</span>I rely on French to better understand medical content.</label>
+                <div class="likert">
+                    <input type="radio" id="q9a" name="q9" value="1" required><label for="q9a">Strongly Disagree</label>
+                    <input type="radio" id="q9b" name="q9" value="2"><label for="q9b">Disagree</label>
+                    <input type="radio" id="q9c" name="q9" value="3"><label for="q9c">Neutral</label>
+                    <input type="radio" id="q9d" name="q9" value="4"><label for="q9d">Agree</label>
+                    <input type="radio" id="q9e" name="q9" value="5"><label for="q9e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">10</span>Using Arabic or French alongside English helps me understand lectures.</label>
+                <div class="likert">
+                    <input type="radio" id="q10a" name="q10" value="1" required><label for="q10a">Strongly Disagree</label>
+                    <input type="radio" id="q10b" name="q10" value="2"><label for="q10b">Disagree</label>
+                    <input type="radio" id="q10c" name="q10" value="3"><label for="q10c">Neutral</label>
+                    <input type="radio" id="q10d" name="q10" value="4"><label for="q10d">Agree</label>
+                    <input type="radio" id="q10e" name="q10" value="5"><label for="q10e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">11</span>EMI prepares me for international medical studies or training.</label>
+                <div class="likert">
+                    <input type="radio" id="q11a" name="q11" value="1" required><label for="q11a">Strongly Disagree</label>
+                    <input type="radio" id="q11b" name="q11" value="2"><label for="q11b">Disagree</label>
+                    <input type="radio" id="q11c" name="q11" value="3"><label for="q11c">Neutral</label>
+                    <input type="radio" id="q11d" name="q11" value="4"><label for="q11d">Agree</label>
+                    <input type="radio" id="q11e" name="q11" value="5"><label for="q11e">Strongly Agree</label>
+                </div>
+            </div>
+            
+            <button type="submit">Submit Questionnaire</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('survey').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your response has been submitted.');
+        });
+    </script>
+</body>
+</html>
