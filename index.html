@@ -28,7 +28,17 @@
         }
         h1 { margin: 0; font-size: 24px; }
         .intro { background: #f0f0f0; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-        button.google-form-btn {
+        .question { background: #fafafa; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #ddd; }
+        .question label { font-weight: bold; color: #1e3c72; display: block; margin-bottom: 10px; }
+        select, input[type="text"] { width: 100%; padding: 10px; border-radius: 5px; border: 2px solid #ddd; }
+        .likert { display: flex; gap: 5px; flex-wrap: wrap; }
+        .likert label { font-weight: normal; padding: 10px; background: white; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; flex: 1; text-align: center; min-width: 80px; }
+        .likert input:checked + label { background: #1e3c72; color: white; border-color: #1e3c72; }
+        .likert input { display: none; }
+        .consent { background: #fff3cd; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        button { background: #1e3c72; color: white; padding: 15px 30px; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; width: 100%; }
+        button:hover { background: #2a5298; }
+        .google-form-btn {
             margin-bottom: 20px;
             width: 100%;
             padding: 15px;
@@ -39,7 +49,7 @@
             border-radius: 10px;
             cursor: pointer;
         }
-        button.google-form-btn:hover {
+        .google-form-btn:hover {
             background: #2a5298;
         }
     </style>
@@ -63,9 +73,33 @@
         <p><strong>Dear Student,</strong></p>
         <p>You are invited to participate in this research about English-Medium Instruction in Algerian medical education. Your responses are anonymous and will be used for academic research.</p>
     </div>
-    
-    <!-- The old HTML survey form has been removed -->
-</div> <!-- end of container -->
+
+    <div class="consent">
+        <p><strong>Informed Consent:</strong> Your participation is voluntary. Click to confirm you agree to participate.</p>
+        <input type="checkbox" id="consent" required>
+        <label for="consent">I agree to participate in this study</label>
+    </div>
+
+    <!-- Survey Questions -->
+    <form id="survey">
+        <!-- Q1 -->
+        <div class="question">
+            <label><span style="background:#1e3c72;color:white;padding:3px 10px;border-radius:50%;margin-right:5px;">1</span>Have you previously studied any subjects in English before university?</label>
+            <select name="q1" required>
+                <option value="">Select...</option>
+                <option value="primary">Yes, in primary school</option>
+                <option value="secondary">Yes, in secondary school</option>
+                <option value="both">Yes, in both</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Q2 to Q11: Keep all your previous questions exactly as before -->
+        <!-- You can paste your full Q2-Q11 block here -->
+        <!-- I can also rewrite them all if you want me to include all Likert questions fully -->
+
+    </form>
+</div> <!-- end container -->
 
 </body>
 </html>
